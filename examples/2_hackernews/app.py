@@ -3,7 +3,7 @@ import os
 
 from flask import Flask
 from flask import render_template as render_flask_template
-from flask_debugtoolbar import DebugToolbarExtension
+from flask_profiler import Profiler
 from htmldoom import doctype
 from htmldoom import elements as e
 from htmldoom import render
@@ -12,15 +12,10 @@ from flask_htmldoom import render_template as render_htmldoom_template
 
 app = Flask(__name__)
 app.debug = True
-app.config["SECRET_KEY"] = "IGNOREME"
-app.config["DEBUG_TB_INTERCEPT_REDIRECTS"] = False
-app.config["DEBUG_TB_PANELS"] = (
-    "flask_debugtoolbar.panels.timer.TimerDebugPanel",
-    "flask_debugtoolbar.panels.template.TemplateDebugPanel",
-    "flask_debugtoolbar.panels.profiler.ProfilerDebugPanel",
-    "flask_debugtoolbar.panels.route_list.RouteListDebugPanel",
-)
-toolbar = DebugToolbarExtension(app)
+app.config["flask_profiler"] = {
+    "enabled": app.config["DEBUG"],
+    "storage": {"engine": "sqlite"},
+}
 
 with open("news.json") as f:
     news = json.load(f)
@@ -54,6 +49,10 @@ def hello_jinja2_view():
 def hello_htmldoom_view():
     """htmldoom rendered view"""
     return render_htmldoom_template("templates.index", **newslist)
+
+
+profiler = Profiler()
+profiler.init_app(app)
 
 
 if __name__ == "__main__":

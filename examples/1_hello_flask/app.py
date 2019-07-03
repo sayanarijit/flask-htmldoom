@@ -2,7 +2,6 @@ import os
 
 from flask import Flask
 from flask import render_template as render_flask_template
-from flask_debugtoolbar import DebugToolbarExtension
 from htmldoom import doctype
 from htmldoom import elements as e
 from htmldoom import render
@@ -10,9 +9,6 @@ from htmldoom import render
 from flask_htmldoom import render_template as render_htmldoom_template
 
 app = Flask(__name__)
-app.debug = True
-app.config["SECRET_KEY"] = "IGNOREME"
-toolbar = DebugToolbarExtension(app)
 
 
 @app.route("/")
