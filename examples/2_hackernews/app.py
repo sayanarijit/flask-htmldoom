@@ -34,6 +34,8 @@ def home():
                 e.a(href="/jinja2")("Jinja2"),
                 e.br(),
                 e.a(href="/htmldoom")("htmldoom"),
+                e.br(),
+                e.a(href="/flask-profiler/")("Rendering performance"),
             ),
         ),
     )
