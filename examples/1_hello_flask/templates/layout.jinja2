@@ -1,0 +1,12 @@
+<!-- templates/layout.jinja2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ data }}</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="content">{% block content %}{% endblock %}</div>
+</body>
+</html>
