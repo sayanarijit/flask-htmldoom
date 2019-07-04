@@ -49,8 +49,6 @@ from .layout import render_document
     e.body()(
         e.h3()("{contents}"),
         e.a(href="/")("Home"),
-        e.br(),
-        e.a(href="/jinja2")("jinja2"),
     )
 )
 def render_body(data):
