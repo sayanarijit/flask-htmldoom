@@ -85,7 +85,7 @@ def render_document(
     data,
     title_renderer=render_title,
     body_renderer=render_body,
-) -> dict:
+):
     return {
         "doctype": doctype,
         "title": title_renderer(doctitle=data["data"]),
