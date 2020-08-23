@@ -6,7 +6,7 @@ __author__ = "Arijit Basu"
 __email__ = "sayanarijit@gmail.com"
 __homepage__ = "https://github.com/sayanarijit/flask-htmldoom"
 __description__ = "htmldoom integration for Flask"
-__version__ = "v0.2.0"
+__version__ = "v0.2.1"
 __license__ = "MIT"
 __all__ = [
     "__author__",
