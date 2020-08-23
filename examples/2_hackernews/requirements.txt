@@ -1,4 +1,4 @@
-Flask==1.0.3
-flask-profiler==1.8.1
-Flask-Htmldoom>=0.1<0.2
+Flask
+flask-profiler
+Flask-Htmldoom>=0.2<0.3
 gunicorn

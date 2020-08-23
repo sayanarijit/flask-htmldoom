@@ -1,6 +1,7 @@
 from pydoc import locate
 
 from flask import _app_ctx_stack, before_render_template, template_rendered
+from htmldoom import render
 
 
 class RendererNotFound(Exception):
@@ -44,4 +45,4 @@ def _render(renderer, context, app):
 def render_template(template_name, **context):
     ctx = _app_ctx_stack.top
     ctx.app.update_template_context(context)
-    return _render(f"{template_name}.render", context, ctx.app)
+    return render(_render(f"{template_name}.render", context, ctx.app))

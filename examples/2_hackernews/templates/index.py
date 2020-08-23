@@ -1,6 +1,5 @@
 from htmldoom import base as b
 from htmldoom import elements as e
-from htmldoom import render as _render
 from htmldoom import renders
 
 from .layout import render_document

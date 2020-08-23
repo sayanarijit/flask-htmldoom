@@ -170,7 +170,7 @@ from htmldoom import renders
 )
 def render_document(data, news_renderer):
     return {
-        "newslist": "".join(
+        "newslist": (
             news_renderer(rank=k + 1, news=v) for k, v in data["news"].items()
         )
     }

@@ -6,7 +6,7 @@ __author__ = "Arijit Basu"
 __email__ = "sayanarijit@gmail.com"
 __homepage__ = "https://github.com/sayanarijit/flask-htmldoom"
 __description__ = "htmldoom integration for Flask"
-__version__ = "v0.1.2"
+__version__ = "v0.2.0"
 __license__ = "MIT"
 __all__ = [
     "__author__",
@@ -61,7 +61,7 @@ setup(
     platforms=["Any"],
     keywords="html rendering for flask",
     packages=find_packages(exclude=["contrib", "docs", "tests", "examples"]),
-    install_requires=["Flask", "htmldoom>=0.6<0.7"],
+    install_requires=["Flask", "htmldoom>=1<2"],
     extras_require={"testing": testing_requires, "dev": dev_requires},
     test_suit="pytest",
 )
