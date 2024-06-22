@@ -2,8 +2,6 @@ Flask-Htmldoom
 ================
 [htmldoom](https://github.com/sayanarijit/htmldoom) integration for Flask
 
-Checkout the **[live demo](https://htmldoom-flask-example.herokuapp.com/)** with [performance debugging](https://htmldoom-flask-example.herokuapp.com/flask-profiler/)
-
 Usage
 ----
 ### Install
